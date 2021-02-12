@@ -1,0 +1,11 @@
+package chap02;
+
+import javax.servlet.http.HttpServlet;
+
+public class HelloServlet extends HttpServlet{
+	//处理get请求
+	@override
+	protected void doGet() {
+		
+	}
+}

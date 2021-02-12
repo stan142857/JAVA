@@ -1,0 +1,14 @@
+package dao;
+
+import java.sql.Date;
+
+public class User {
+	public int getId() {
+		
+	}
+	private int id;
+	private String username;
+	private String userpwd;
+	private String hobby;
+	
+}

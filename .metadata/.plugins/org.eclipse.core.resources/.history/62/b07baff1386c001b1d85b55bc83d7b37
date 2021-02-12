@@ -1,0 +1,22 @@
+package chap01;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+
+import com.mysql.cj.xdevapi.Statement;;
+
+public class testJDBC {
+	public static void main(String args[]) throws Exception{
+		Connection connection = null;
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/test?useUnicode=true&characterEncoding=GBK");
+			Statement st = connection.createStatement();
+			
+		}catch(Exception e) {
+			
+		}finally {
+			
+		}
+	}
+}

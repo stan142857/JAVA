@@ -1,0 +1,76 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.Date"  %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>显示服务器的日期时间</title>
+</head>
+<body>
+服务器当前的时间，<%= new Date() %>
+<br>
+<%-- 使用jsp标签定义一个变量 --%>
+<%! int chap01 = 3; %>
+<%=chap01 %>
+
+<%-- 动作标签 --%>
+	<jsp:include page="showtest.jsp"></jsp:include>
+	
+<%-- 小脚本 --%>
+<%! int chap02 = 3; %>
+<%
+	//输出，此处是java代码，可以使用双斜杠注释
+	out.print(chap02>2?"是的":"不是");
+%>
+<%
+	switch(chap02){
+		case 3 :
+				out.print("第"+chap02+"天");
+				break;
+	};
+%>
+
+<%--混编 java + jsp --%>
+<%for(int i = 0;i<chap02;i++){%>
+		<%--混编，html受java for循环的控制 --%>
+		<font size = "<%=i*3%>">JAVA</font>
+<%	}%>
+
+<%--混编实现九九乘法表 --%>
+<%
+for(int i=0;i<10;i++ ){
+	for(int j=1;j<10;j++){
+		if(j<=i){
+			out.print(i+"*"+j+"="+i*j+" ");
+		}
+	}%>
+	<br>
+<%
+}
+%>
+
+<%--冒泡排序 --%>
+<%!int [] chap03 = {89,5,98,65,23,32}; %>
+<%
+	for(int i=0;i<chap03.length;i++){
+		out.print(chap03[i] + " ");		
+	}%><%
+	for(int i=0;i<chap03.length-1;i++){
+		for(int j=0;j<chap03.length-1-i;j++){
+			if(chap03[j]>chap03[i]){
+				int temp = chap03[j];
+				chap03[j]=chap03[j+1];
+				chap03[j+1]=temp;
+			}
+		}
+	}
+%>
+<br>
+<%
+	for(int i=0;i<chap03.length;i++){
+		out.print(chap03[i] + " ");		
+	}
+%>
+</body>
+</html>

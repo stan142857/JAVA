@@ -1,0 +1,37 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 注册页面 -->
+<h1>注册新用户</h1>
+<!-- action 提交请求的地址 method 处理请求的方式-->
+<form action="" method="get">
+	<table>
+		<tr>
+			<td>用户名：</td>
+			<td>
+			<input type="text" name ="userName/">
+			</td>
+		</tr>
+		<tr>
+			<td>密码：</td>
+			<td>
+			<input type="password" name ="userName/">
+			</td>
+		</tr>
+		<tr>
+			<td>爱好：</td>
+			<td>
+			<input type="password" name ="userName/">
+			</td>
+		</tr>
+	</table>
+</form>
+</body>
+</html>

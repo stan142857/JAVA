@@ -1,0 +1,30 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<%--EL 域 使用request --%>
+<%request.setAttribute("user", "yuan") ;%>
+<%=request.getAttribute("user") %>
+${requestScope.user}
+<br>
+<%--EL 使用session --%>
+<%session.setAttribute("user", "lei") ;%>
+<%=session.getAttribute("user") %>
+${sessionScope.user}
+<br>
+<%--EL 使用request --%>
+<%application.setAttribute("user", "yuanlei") ;%>
+<%=application.getAttribute("user") %>
+${applicationScope.user}
+<br>
+<%--EL 使用request --%>
+<%request.setAttribute("user", "yuanl") ;%>
+<%=request.getAttribute("user") %>
+${requestScope.user}
+</body>
+</html>

@@ -1,0 +1,17 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ page import="java.util.Date"  %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>显示服务器的日期时间</title>
+</head>
+<body>
+服务器当前的时间，<%= new Date() %>
+<br>
+<%-- 使用jsp标签定义一个变量 --%>
+<%! int a = 3; %>
+<%=a %>
+</body>
+</html>

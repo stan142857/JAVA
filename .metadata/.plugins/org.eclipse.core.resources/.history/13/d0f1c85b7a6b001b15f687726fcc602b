@@ -1,0 +1,22 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>userService</title>
+</head>
+<body>
+<!-- 处理注册的jsp对象 -->
+<%
+	//获取请求的参数
+	String userName = request.getParameter("userName");
+	String userPwd = request.getParameter("userPwd");
+	String [] hobby = request.getParameterValues(name)("hobby");
+	//获取一个key，多个值
+	out.print(userName);
+	
+%>
+
+</body>
+</html>

@@ -1,0 +1,34 @@
+package dao;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+
+public class Userdao extends Basedao{
+	public boolean insert(User user) {
+		try {
+			Connection c = this.getConnection();
+			String sql = "insert into userinfo(username,userpwd,hobby)";
+			PreparedStatement pst = c.prepareStatement(sql);
+			pst.setString(1, user.getUsername());
+			pst.setString(2, user.getPassword());
+			pst.setString(3, user.getUsername());
+			pst.execute();
+			return true;
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+		
+		
+		
+		
+		
+		
+		
+		return false;
+		
+	}
+}

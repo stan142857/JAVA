@@ -1,0 +1,7 @@
+package chap07;
+
+public class UserEL {
+	String name;
+	String pass;
+	
+}

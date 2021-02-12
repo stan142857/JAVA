@@ -1,0 +1,16 @@
+package chap02;
+
+import java.io.IOException;
+
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+
+public class HelloServlet extends HttpServlet{
+	//处理get请求
+	@Override
+	protected void doGet(HttpServletRequest req,HttpServletResponse resp)
+		throws ServletException,IOException
+	{
+		
+	}
+}

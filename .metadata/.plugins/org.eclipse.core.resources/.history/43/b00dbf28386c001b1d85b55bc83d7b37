@@ -1,0 +1,9 @@
+package chap01;
+
+import java.sql.Connection;;
+
+public class testJDBC {
+	public static void main(String args[]) throws Exception{
+		
+	}
+}
