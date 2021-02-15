@@ -403,9 +403,159 @@ Maven在dao层建立xml后，在目标文件夹中没有生效
     </mappers>
 ```
 
+### 7.动态sql
 
 
-# 日志的控制台输出
+
+## lomlok插件的使用
+
+用处：在构造实体类的时候不需要再输入 重复的 get set 等等代码
+
+### 使用步骤：
+
+- idea中下载
+- 项目中导入
+
+```java
+<!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
+<dependency>
+    <groupId>org.projectlombok</groupId>
+    <artifactId>lombok</artifactId>
+    <version>1.18.16</version>
+    <scope>provided</scope>
+</dependency>
+```
+
+- 加入注解
+
+```xml
+@ToString
+@EqualsAndHashCode
+@AllArgsConstructor, @RequiredArgsConstructor and @NoArgsConstructor
+@Log, @Log4j, @Log4j2, @Slf4j, @XSlf4j, @CommonsLog, @JBossLog, @Flogger, @CustomLog
+@Data
+@Builder
+@SuperBuilder
+@Singular
+@Delegate
+@Value
+@Accessors
+@Wither
+@With
+@SneakyThrows
+@val
+@var
+experimental @var
+@UtilityClass
+Lombok config system
+```
+
+```java
+@Data
+public class dept {
+    private int deptid;
+    private int deptcode;
+    private int deptname;
+    private int deptTime;
+    private int deptstat;
+}
+```
+
+
+
+## 二级缓存
+
+要启用全局的二级缓存，只需要在你的 SQL 映射文件中添加一行：
+
+```java
+<cache/>
+```
+
+或者自定义参数
+
+```xml
+<cache
+  eviction="FIFO"
+  flushInterval="60000"
+  size="512"
+  readOnly="true"/>
+```
+
+效果：
+
+```java
+映射语句文件中的所有 select 语句的结果将会被缓存。
+映射语句文件中的所有 insert、update 和 delete 语句会刷新缓存。
+缓存会使用最近最少使用算法（LRU, Least Recently Used）算法来清除不需要的缓存。
+缓存不会定时进行刷新（也就是说，没有刷新间隔）。
+缓存会保存列表或对象（无论查询方法返回哪种）的 1024 个引用。
+缓存会被视为读/写缓存，这意味着获取到的对象并不是共享的，可以安全地被调用者修改，而不干扰其他调用者或线程所做的潜在修改。
+```
+
+测试：
+
+```java
+        SqlSession sqlSession = myBatisUtils.getSqlSession();
+//      新建 2 对象，测试是否从二级缓存读取
+        SqlSession sqlSession2 = myBatisUtils.getSqlSession();
+        UserMapper sqlSessionMapper = sqlSession.getMapper(UserMapper.class);
+        List<User> userList = sqlSessionMapper.getUserList();
+        for (User user:userList){
+            System.out.print (user);
+        }
+        sqlSession.close ();
+
+//      2对象  测试是否从二级缓存读取
+        UserMapper sqlSessionMapper2 = sqlSession2.getMapper(UserMapper.class);
+        List<User> userList2 = sqlSessionMapper2.getUserList();
+        for (User user:userList2){
+            System.out.print (user);
+        }
+        sqlSession2.close ();
+    }
+```
+
+结果
+
+```xml
+Setting autocommit to false on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2cc44ad]
+//这里依旧在读取数据库
+==>  Preparing: select * from infomanage.userinfo; 
+==> Parameters: 
+<==    Columns: id, username, userpwd, hobby
+<==        Row: 1, yuanlei, yuanlei, 1
+<==        Row: 2, stan, stan, 2
+<==        Row: 3, still, still, 3
+<==        Row: 4, admin, admin, 1
+<==        Row: 21, sxy, sxy66666, 1
+<==      Total: 5
+User{id=1, username='yuanlei', userpwd='yuanlei', hobby='1}
+User{id=2, username='stan', userpwd='stan', hobby='2}
+User{id=3, username='still', userpwd='still', hobby='3}
+User{id=4, username='admin', userpwd='admin', hobby='1}
+User{id=21, username='sxy', userpwd='sxy66666', hobby='1}
+Resetting autocommit to true on JDBC Connection [com.mysql.jdbc.JDBC4Connection@2cc44ad]
+Closing JDBC Connection [com.mysql.jdbc.JDBC4Connection@2cc44ad]
+//储存数据到二级缓存中
+Returned connection 46941357 to pool.
+//获取二级缓存
+Cache Hit Ratio [com.yuan.dao.UserMapper]: 0.5
+User{id=1, username='yuanlei', userpwd='yuanlei', hobby='1}
+User{id=2, username='stan', userpwd='stan', hobby='2}
+User{id=3, username='still', userpwd='still', hobby='3}
+User{id=4, username='admin', userpwd='admin', hobby='1}
+User{id=21, username='sxy', userpwd='sxy66666', hobby='1}
+Disconnected from the target VM, address: '127.0.0.1:4985', transport: 'socket'
+
+```
+
+
+
+
+
+
+
+## 日志的控制台输出
 
 ### logImpl
 
@@ -465,9 +615,9 @@ Maven在dao层建立xml后，在目标文件夹中没有生效
 
 **ALT+INSERT** GENERATE
 
+# [Spring 开源下载](https://repo.spring.io/release/org/springframework/spring/)
 
-
-
+参考视频点击[此处](https://www.bilibili.com/video/BV1WE411d7Dv?from=search&seid=6506222528246419724)
 
 
 
