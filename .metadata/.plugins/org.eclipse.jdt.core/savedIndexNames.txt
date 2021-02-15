@@ -7,7 +7,6 @@ INDEX VERSION 1.131+E:\TheWorld\javaWorkspace\.metadata\.plugins\org.eclipse.jdt
 339618121.index
 1844802624.index
 3863057372.index
-888038819.index
 1283825727.index
 1964575244.index
 130601786.index
