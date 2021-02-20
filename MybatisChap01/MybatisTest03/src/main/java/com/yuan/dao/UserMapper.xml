@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.yuan.dao.UserMapper">
+    <!--开启二级缓存-->
+    <cache
+            eviction="FIFO"
+            flushInterval="60000"
+            size="512"
+            readOnly="true"/>
+    <!--查询  无参-->
+    <select id="getUserList" resultType="com.yuan.pojo.User">
+        select * from infomanage.userinfo;
+    </select>
+    <!--查询 id为参-->
+    <select id="getUserById" resultType="com.yuan.pojo.User" parameterType="int">
+        select * from infomanage.userinfo where id = #{id};
+    </select>
+    <!--查询 id为参  like-->
+    <select id="getUserlikeById" resultType="com.yuan.pojo.User">
+        select * from infomanage.userinfo where id like "%"#{id}"%"
+    </select>
+    <!--插入-->
+    <insert id="insertUser" parameterType="com.yuan.pojo.User">
+        insert into infomanage.userinfo(username,userpwd,hobby) values (#{username},#{userpwd},#{hobby});
+    </insert>
+    <!--Map-->
+    <!--插入-->
+    <insert id="insertUser2" parameterType="map">
+        insert into infomanage.userinfo(username,userpwd) values (#{username},#{userpwd});
+    </insert>
+    <!--修改-->
+    <update id="updateUser" parameterType="com.yuan.pojo.User">
+        update infomanage.userinfo set username=#{username},userpwd=#{userpwd},hobby=#{hobby} where id = #{id};
+    </update>
+    <!--删除-->
+    <delete id="deleteUser" parameterType="int">
+        delete from infomanage.userinfo where id = #{id};
+    </delete>
+</mapper>

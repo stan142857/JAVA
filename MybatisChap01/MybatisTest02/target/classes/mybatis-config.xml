@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--configuration核心配置文件-->
+<configuration>
+    <!--引入外部配置文件-->
+    <properties resource="SupportDB.properties"/>
+    <!--引入日志-->
+    <settings>
+        <!--标准的日志工厂的实现-->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+        <!--LOG4J的日志输出使用-->
+        <!--<setting name="logImpl" value="LOG4J"/>-->
+    </settings>
+    <!--可以给实体类起别名-->
+    <typeAliases>
+        <package name="com.yuan.pojo"/>
+    </typeAliases>
+    <!--可以定义多个环境-->
+    <environments default="development">
+        <environment id="development">
+            <!--事务管理 jdbc-->
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="${driver}"/>
+                <property name="url" value="${url}"/>
+                <property name="username" value="${username}"/>
+                <property name="password" value="${userpwd}"/>
+            </dataSource>
+        </environment>
+    </environments>
+    <!--
+        每一个Mapper.xml都需要在mybatis核心配置中注册
+        注解 使用class注册
+     -->
+    <mappers>
+        <mapper class="com.yuan.dao.UserMapper"/>
+    </mappers>
+</configuration>
