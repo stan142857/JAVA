@@ -2,6 +2,8 @@
 
 ## 1.1、前期准备
 
+#### 学习[地址](https://docs.spring.io/spring-framework/docs/5.2.0.RELEASE/spring-framework-reference/core.html#spring-core)
+
 #### 了解：
 
 - SSH :  Struct2 + Spring + Hibernate
@@ -97,4 +99,90 @@
 | 主动权在程序员，每增加一种需要就要修改业务层                 | 主动权在用户，增加需要后用户选择调用                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 | ![image-20210220110949568](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210220110949568.png) | ![image-20210220111005187](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210220111005187.png) |
+
+![image-20210221105255301](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210221105255301.png)
+
+#### 控制
+
+谁来控制对象的创建？传统应用程序的对象是由程序本身控制创建的，使用Spring后，对象是由Spring来创建的。
+
+#### 反转
+
+程序本身不创建对象，变成被动的接收对象
+
+#### 依赖注入
+
+利用set方法来进行注入
+
+#### IOC小结
+
+IOC是一种编程思想，由主动的编程变成被动的接收
+
+我们彻底不用在程序中去做改动，要实现不同的操作，只需要在xml配置文件中进行注册就可以
+
+##### 所谓的IOC
+
+一句话：对象由Spring创建、管理、装配
+
+#### 思考：
+
+Hello对象的属性是怎么设置的？
+
+答案：是由Spring容器设置的
+
+### 底层逻辑
+
+![image-20210221100503293](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210221100503293.png)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
