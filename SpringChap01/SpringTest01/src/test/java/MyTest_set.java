@@ -3,10 +3,11 @@ import com.yuan.service.UserService;
 import com.yuan.service.UserServiceImpl;
 
 /**
- * Created by yuanlei on 2021/2/20.
+ * Created by yuanlei on 2021/2/21.
  */
-public class MyTest {
+public class MyTest_set {
     public static void main(String[] args){
+        //测试 set
 
         //用户实际调用的是业务层，dao层他们不需要接触
         UserService userService = new UserServiceImpl();
@@ -19,7 +20,6 @@ public class MyTest {
         //原本套路：扩展业务后，修改service层，但是现在只需要专注业务层
 
         //即控制反转
-
         ((UserServiceImpl)userService).setUserDao(new UserDaoMysqlImpl());
         userService.getUser();
     }
