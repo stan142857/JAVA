@@ -5,6 +5,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringChap01.iml" filepath="$PROJECT_DIR$/SpringChap01.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringTest01/SpringTest01.iml" filepath="$PROJECT_DIR$/SpringTest01/SpringTest01.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringTest02-IOC-helloSpring/SpringTest02-IOC-helloSpring.iml" filepath="$PROJECT_DIR$/SpringTest02-IOC-helloSpring/SpringTest02-IOC-helloSpring.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/SpringTest03-IOC-createStyle.iml" filepath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/SpringTest03-IOC-createStyle.iml" />
     </modules>
   </component>
 </project>

@@ -11,6 +11,7 @@
     <modules>
         <module>SpringTest01</module>
         <module>SpringTest02-IOC-helloSpring</module>
+        <module>SpringTest03-IOC-createStyle</module>
     </modules>
 
     <dependencies>

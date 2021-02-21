@@ -90,7 +90,7 @@
     }
 ```
 
-![image-20210220110454696](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210220110454696.png)
+![image-20210220110454696](readmeSpring.assets/image-20210220110454696.png)
 
 ### 控制反转
 
@@ -98,9 +98,9 @@
 
 | 主动权在程序员，每增加一种需要就要修改业务层                 | 主动权在用户，增加需要后用户选择调用                         |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
-| ![image-20210220110949568](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210220110949568.png) | ![image-20210220111005187](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210220111005187.png) |
+| ![image-20210220110949568](readmeSpring.assets/image-20210220110949568.png) | ![image-20210220111005187](readmeSpring.assets/image-20210220111005187.png) |
 
-![image-20210221105255301](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210221105255301.png)
+![image-20210221105255301](readmeSpring.assets/image-20210221105255301.png)
 
 #### 控制
 
@@ -132,9 +132,7 @@ Hello对象的属性是怎么设置的？
 
 ### 底层逻辑
 
-![image-20210221100503293](C:\Users\Administrator\AppData\Roaming\Typora\typora-user-images\image-20210221100503293.png)
-
-
+![image-20210221100503293](readmeSpring.assets/image-20210221100503293.png)
 
 
 

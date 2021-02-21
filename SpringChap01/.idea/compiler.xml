@@ -24,12 +24,14 @@
         <processorPath useClasspath="true" />
         <module name="SpringTest01" />
         <module name="SpringTest02-IOC-helloSpring" />
+        <module name="SpringTest03-IOC-createStyle" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="SpringChap01" target="1.5" />
       <module name="SpringTest01" target="1.5" />
       <module name="SpringTest02-IOC-helloSpring" target="1.5" />
+      <module name="SpringTest03-IOC-createStyle" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
