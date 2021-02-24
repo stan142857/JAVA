@@ -8,7 +8,7 @@ public class User {
 
     public User(String name) {
         this.name = name;
-        System.out.println("name被创建");
+        System.out.println(name+" : name被创建");
     }
 
     public String getName() {

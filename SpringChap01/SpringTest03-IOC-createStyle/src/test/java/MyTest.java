@@ -9,11 +9,11 @@ public class MyTest {
     public static void main(String [] args){
         // Spring容器
         // 创建并实例化beans
-        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
         // 检索配置的实例
         //getBean 的时候已经取出了对象，用的无参构造
         //注意 ： 这一步会取出beans.xml的所有无参构造，输出实例化的构造
-        User user = (User) context.getBean("user");
+        User user = (User) context.getBean("beans2user3");
         user.show();
     }
 }

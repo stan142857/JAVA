@@ -5,23 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="13e8ff76-753e-4b54-9b27-090ff0387c5d" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_3_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_3_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_3_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_3_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_3_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_3_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_3_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_3_4.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringChap01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringChap01.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringTest01/SpringTest01.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest01/SpringTest01.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringTest02-IOC-helloSpring/SpringTest02-IOC-helloSpring.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest02-IOC-helloSpring/SpringTest02-IOC-helloSpring.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringTest02-IOC-helloSpring/target/classes/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest02-IOC-helloSpring/target/classes/beans.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringTest02-IOC-helloSpring/target/test-classes/MyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest02-IOC-helloSpring/target/test-classes/MyTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/SpringTest03-IOC-createStyle.iml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/SpringTest03-IOC-createStyle.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/java/com/yuan/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/java/com/yuan/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/java/com/yuan/pojo/UserSecondTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/java/com/yuan/pojo/UserSecondTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/beans2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/beans2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/beans3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/beans3.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/test/java/MyTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/test/java/MyTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/target/classes/beans.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/target/classes/beans.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/target/classes/com/yuan/pojo/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/target/classes/com/yuan/pojo/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/target/classes/com/yuan/pojo/UserSecondTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/target/classes/com/yuan/pojo/UserSecondTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/target/test-classes/MyTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/target/test-classes/MyTest.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../readmeSpring.md" beforeDir="false" afterPath="$PROJECT_DIR$/../readmeSpring.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
@@ -40,66 +39,99 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="infomanage@localhost" type="feb32156:DbDataSourceImpl" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="infomanage@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+      </path>
+      <path>
+        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
+        <item name="infomanage@localhost" type="feb32156:DbDataSourceImpl" />
+        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
+        <item name="infomanage: schema" type="76f4a085:MysqlImplModel$Schema" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="FavoritesManager">
     <favorites_list name="SpringChap01" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/test/java/MyTest.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="228">
+              <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/java/com/yuan/pojo/User.java">
+        <entry file="file://$PROJECT_DIR$/SpringTest04-DI/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
-              <folding>
-                <element signature="e#206#207#0" expanded="true" />
-                <element signature="e#233#234#0" expanded="true" />
-                <element signature="e#273#274#0" expanded="true" />
-                <element signature="e#305#306#0" expanded="true" />
-                <element signature="e#330#331#0" expanded="true" />
-                <element signature="e#377#378#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="247">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/java/com/yuan/pojo/UserSecondTest.java">
+        <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/pom.xml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpringTest04-DI/src/main/resources/beans.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="95">
-              <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
-              <folding>
-                <element signature="e#127#128#0" expanded="true" />
-                <element signature="e#167#168#0" expanded="true" />
-                <element signature="e#116#117#0" expanded="true" />
-                <element signature="e#147#148#0" expanded="true" />
-                <element signature="e#195#196#0" expanded="true" />
-                <element signature="e#235#236#0" expanded="true" />
-                <element signature="e#260#261#0" expanded="true" />
-                <element signature="e#307#308#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="114">
+              <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/beans.xml">
+        <entry file="file://$PROJECT_DIR$/SpringTest04-DI/SpringTest04-DI.iml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="293">
-              <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+            <state relative-caret-position="247">
+              <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/SpringTest03-IOC-createStyle.iml">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpringTest02-IOC-helloSpring/SpringTest02-IOC-helloSpring.iml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="15" column="14" selection-end-line="27" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SpringChap01.iml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -107,6 +139,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="package.json" />
         <option value="Class" />
       </list>
     </option>
@@ -130,25 +163,47 @@
         <option value="$PROJECT_DIR$/SpringTest01/src/test/java/MyTest.java" />
         <option value="$PROJECT_DIR$/SpringTest01/src/test/java/MyTest_set.java" />
         <option value="$PROJECT_DIR$/SpringTest01/src/test/java/MyTest_bean.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/java/com/yuan/pojo/UserSecondTest.java" />
         <option value="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/beans.xml" />
+        <option value="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/applicationContext.xml" />
         <option value="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/java/com/yuan/pojo/User.java" />
+        <option value="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/java/com/yuan/pojo/UserSecondTest.java" />
+        <option value="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/beans3.xml" />
+        <option value="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/beans2.xml" />
         <option value="$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/test/java/MyTest.java" />
+        <option value="$PROJECT_DIR$/SpringTest04-DI/src/main/java/package.json" />
+        <option value="$PROJECT_DIR$/SpringTest04-DI/src/main/java/com/yuan/pojo/User.java" />
+        <option value="$PROJECT_DIR$/SpringTest04-DI/src/main/resources/beans.xml" />
+        <option value="$PROJECT_DIR$/SpringTest04-DI/src/main/java/com/yuan/pojo/Address.java" />
+        <option value="$PROJECT_DIR$/SpringTest04-DI/src/main/java/com/yuan/pojo/Student.java" />
+        <option value="$PROJECT_DIR$/SpringTest04-DI/SpringTest04-DI.iml" />
+        <option value="$PROJECT_DIR$/SpringTest04-DI/src/test/java/MyTest.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="$APPLICATION_HOME_DIR$/plugins/maven/lib/maven3" />
+      </MavenGeneralSettings>
     </option>
   </component>
   <component name="MavenProjectNavigator">
     <treeState>
-      <expand />
+      <expand>
+        <path>
+          <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
+          <item name="SpringTest04-DI" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+        </path>
+      </expand>
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="492" />
-    <option name="y" value="48" />
-    <option name="width" value="1204" />
-    <option name="height" value="699" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1382" />
+    <option name="height" value="744" />
   </component>
   <component name="ProjectId" id="1opSx8C2quFgLi3Yp5QQ5YpTCrt" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
@@ -159,6 +214,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -170,6 +226,11 @@
             <path>
               <item name="SpringChap01" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringChap01" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringTest02-IOC-helloSpring" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringChap01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringChap01" type="462c0819:PsiDirectoryNode" />
               <item name="SpringTest03-IOC-createStyle" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -181,55 +242,33 @@
             <path>
               <item name="SpringChap01" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringChap01" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringTest03-IOC-createStyle" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringTest04-DI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringChap01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringChap01" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringTest04-DI" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SpringChap01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SpringChap01" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringTest04-DI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SpringChap01" type="b2602c69:ProjectViewProjectNode" />
               <item name="SpringChap01" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringTest03-IOC-createStyle" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringChap01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringChap01" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringTest03-IOC-createStyle" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringChap01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringChap01" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringTest03-IOC-createStyle" type="462c0819:PsiDirectoryNode" />
+              <item name="SpringTest04-DI" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringChap01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringChap01" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringTest03-IOC-createStyle" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SpringChap01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SpringChap01" type="462c0819:PsiDirectoryNode" />
-              <item name="SpringTest03-IOC-createStyle" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="ProjectViewState">
@@ -237,13 +276,23 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DatabaseDriversLRU" value="sqlserver&#10;mysql" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1614129548677" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1614173432767" />
+    <property name="database.console.LAST_STATE" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\TheWorld\javaWorkspace\SpringChap01\SpringTest04-DI" />
+      <recent name="E:\TheWorld\javaWorkspace\SpringChap01\SpringTest03-IOC-createStyle\src\main\resources" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="E:\TheWorld\javaWorkspace\SpringChap01\SpringTest02-IOC-helloSpring\src\main\resources" />
     </key>
@@ -492,7 +541,13 @@
       <workItem from="1613984617976" duration="371000" />
       <workItem from="1613985017081" duration="579000" />
       <workItem from="1613986378155" duration="537000" />
-      <workItem from="1614043001414" duration="4110000" />
+      <workItem from="1614043001414" duration="6141000" />
+      <workItem from="1614166408081" duration="2559000" />
+      <workItem from="1614169018079" duration="304000" />
+      <workItem from="1614169377893" duration="222000" />
+      <workItem from="1614169660434" duration="2599000" />
+      <workItem from="1614172326429" duration="772000" />
+      <workItem from="1614173295672" duration="160000" />
     </task>
     <task id="LOCAL-00001" summary="删除原测试内容，添加 bean 与 set的单独测试以区分其区别">
       <created>1613875782818</created>
@@ -501,17 +556,30 @@
       <option name="project" value="LOCAL" />
       <updated>1613875782818</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="复制原beans.xml，测试多个配置文件如何import">
+      <created>1614166806593</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1614166806593</updated>
+    </task>
+    <task id="LOCAL-00003" summary="在容器中使用总的配置，将其他人的配置导入这里，实现团队开发">
+      <created>1614168714759</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1614168714759</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4647000" />
+    <option name="totallyTimeSpent" value="13294000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="492" y="48" width="1204" height="699" extended-state="0" />
-    <editor active="true" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26748252" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.1762481" />
       <window_info id="Structure" order="1" weight="0.25" />
       <window_info id="DB Browser" order="2" />
       <window_info id="Capture Tool" order="3" />
@@ -519,21 +587,22 @@
       <window_info id="Palette&#9;" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Image Layers" order="7" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32960895" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.29734513" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.32920355" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="DB Execution Console" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
-      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" weight="0.32894737" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.3221239" />
-      <window_info anchor="bottom" id="Spring" order="12" />
-      <window_info anchor="bottom" id="Docker" order="13" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="14" />
+      <window_info anchor="bottom" id="Database Console" order="0" weight="0.32847896" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" visible="true" weight="0.20819671" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49912587" weight="0.30097088" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.33777037" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="DB Execution Console" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5008741" side_tool="true" weight="0.36106488" />
+      <window_info anchor="bottom" id="Version Control" order="11" />
+      <window_info anchor="bottom" id="Messages" order="12" weight="0.31967214" />
+      <window_info anchor="bottom" id="Spring" order="13" />
+      <window_info anchor="bottom" id="Docker" order="14" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="15" show_stripe_button="false" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -542,8 +611,8 @@
       <window_info anchor="right" id="Capture Analysis" order="5" />
       <window_info anchor="right" id="Maven Projects" order="6" weight="0.24038461" />
       <window_info anchor="right" id="Coverage" order="7" side_tool="true" weight="0.32954547" />
-      <window_info anchor="right" id="Maven" order="8" weight="0.14073427" />
-      <window_info anchor="right" id="Database" order="9" />
+      <window_info anchor="right" id="Maven" order="8" visible="true" weight="0.25416037" />
+      <window_info anchor="right" id="Database" order="9" weight="0.32954547" />
       <window_info anchor="right" id="Theme Preview" order="10" />
     </layout>
   </component>
@@ -592,26 +661,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="删除原测试内容，添加 bean 与 set的单独测试以区分其区别" />
-    <option name="LAST_COMMIT_MESSAGE" value="删除原测试内容，添加 bean 与 set的单独测试以区分其区别" />
+    <MESSAGE value="复制原beans.xml，测试多个配置文件如何import" />
+    <MESSAGE value="在容器中使用总的配置，将其他人的配置导入这里，实现团队开发" />
+    <option name="LAST_COMMIT_MESSAGE" value="在容器中使用总的配置，将其他人的配置导入这里，实现团队开发" />
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/SpringTest01/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringTest02-IOC-helloSpring/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SpringTest02-IOC-helloSpring/SpringTest02-IOC-helloSpring.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk1.8.0_281/src.zip!/java/lang/Object.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
@@ -733,21 +791,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="22" column="21" selection-start-line="22" selection-start-column="21" selection-end-line="22" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SpringTest02-IOC-helloSpring/src/main/resources/beans.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="142">
           <caret line="9" selection-start-line="9" selection-end-line="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -764,7 +811,7 @@
         <state relative-caret-position="171">
           <caret line="9" column="55" selection-start-line="9" selection-start-column="55" selection-end-line="9" selection-end-column="55" />
           <folding>
-            <element signature="imports" expanded="false" />
+            <element signature="imports" />
           </folding>
         </state>
       </provider>
@@ -779,54 +826,269 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/beans.xml">
+    <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/java/com/yuan/pojo/UserSecondTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="293">
-          <caret line="23" column="50" lean-forward="true" selection-start-line="23" selection-start-column="50" selection-end-line="23" selection-end-column="50" />
+        <state relative-caret-position="114">
+          <caret line="6" column="33" selection-start-line="6" selection-start-column="33" selection-end-line="6" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/beans3.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="31" column="75" lean-forward="true" selection-start-line="31" selection-start-column="75" selection-end-line="31" selection-end-column="75" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/java/com/yuan/pojo/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="10" column="38" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <caret line="10" column="46" lean-forward="true" selection-start-line="10" selection-start-column="46" selection-end-line="10" selection-end-column="46" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="31" column="68" selection-start-line="31" selection-start-column="63" selection-end-line="31" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/beans2.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="27">
+          <caret line="19" column="77" selection-start-line="19" selection-start-column="66" selection-end-line="19" selection-end-column="77" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/resources/applicationContext.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" column="8" lean-forward="true" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest01/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest04/pom.xml" />
+    <entry file="file://$PROJECT_DIR$/SpringTest04-DI/src/main/java/package.json" />
+    <entry file="das://8cec0121-5bec-4e61-82dc-a2240a7dfcbb/schema/infomanage/table/deptinfo">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/8cec0121-5bec-4e61-82dc-a2240a7dfcbb/console.sql">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest02-IOC-helloSpring/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="45" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest04-DI/src/main/java/com/yuan/pojo/User.java" />
+    <entry file="file://$USER_HOME$/.m2/settings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-684" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest04-DI/src/main/java/com/yuan/pojo/Address.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <element signature="e#206#207#0" expanded="true" />
-            <element signature="e#233#234#0" expanded="true" />
-            <element signature="e#273#274#0" expanded="true" />
-            <element signature="e#305#306#0" expanded="true" />
-            <element signature="e#330#331#0" expanded="true" />
-            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#107#108#0" expanded="true" />
+            <element signature="e#137#138#0" expanded="true" />
+            <element signature="e#183#184#0" expanded="true" />
+            <element signature="e#221#222#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/main/java/com/yuan/pojo/UserSecondTest.java">
+    <entry file="file://$PROJECT_DIR$/SpringTest04-DI/src/main/java/com/yuan/pojo/Student.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="26" selection-start-line="5" selection-start-column="26" selection-end-line="5" selection-end-column="26" />
+        <state relative-caret-position="785">
+          <caret line="93" lean-forward="true" selection-start-line="93" selection-end-line="93" />
           <folding>
-            <element signature="e#127#128#0" expanded="true" />
-            <element signature="e#167#168#0" expanded="true" />
-            <element signature="e#116#117#0" expanded="true" />
-            <element signature="e#147#148#0" expanded="true" />
-            <element signature="e#195#196#0" expanded="true" />
-            <element signature="e#235#236#0" expanded="true" />
-            <element signature="e#260#261#0" expanded="true" />
-            <element signature="e#307#308#0" expanded="true" />
+            <element signature="e#493#494#0" expanded="true" />
+            <element signature="e#520#521#0" expanded="true" />
+            <element signature="e#560#561#0" expanded="true" />
+            <element signature="e#592#593#0" expanded="true" />
+            <element signature="e#627#628#0" expanded="true" />
+            <element signature="e#657#658#0" expanded="true" />
+            <element signature="e#704#705#0" expanded="true" />
+            <element signature="e#742#743#0" expanded="true" />
+            <element signature="e#776#777#0" expanded="true" />
+            <element signature="e#804#805#0" expanded="true" />
+            <element signature="e#848#849#0" expanded="true" />
+            <element signature="e#882#883#0" expanded="true" />
+            <element signature="e#921#922#0" expanded="true" />
+            <element signature="e#950#951#0" expanded="true" />
+            <element signature="e#1000#1001#0" expanded="true" />
+            <element signature="e#1036#1037#0" expanded="true" />
+            <element signature="e#1080#1081#0" expanded="true" />
+            <element signature="e#1107#1108#0" expanded="true" />
+            <element signature="e#1160#1161#0" expanded="true" />
+            <element signature="e#1192#1193#0" expanded="true" />
+            <element signature="e#1229#1230#0" expanded="true" />
+            <element signature="e#1257#1258#0" expanded="true" />
+            <element signature="e#1304#1305#0" expanded="true" />
+            <element signature="e#1338#1339#0" expanded="true" />
+            <element signature="e#1369#1370#0" expanded="true" />
+            <element signature="e#1396#1397#0" expanded="true" />
+            <element signature="e#1436#1437#0" expanded="true" />
+            <element signature="e#1468#1469#0" expanded="true" />
+            <element signature="e#1503#1504#0" expanded="true" />
+            <element signature="e#1530#1531#0" expanded="true" />
+            <element signature="e#1574#1575#0" expanded="true" />
+            <element signature="e#1606#1607#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/src/test/java/MyTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+        <state relative-caret-position="209">
+          <caret line="11" column="71" selection-start-line="11" selection-start-column="41" selection-end-line="11" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest04-DI/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest04-DI/src/main/resources/beans.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="53" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/SpringTest03-IOC-createStyle.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringChap01.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest04-DI/SpringTest04-DI.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="13" column="9" selection-start-line="13" selection-start-column="9" selection-end-line="13" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest04-DI/src/test/java/MyTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" lean-forward="true" selection-start-line="11" selection-end-line="11" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SpringTest02-IOC-helloSpring/SpringTest02-IOC-helloSpring.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="14" selection-end-line="27" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="13" column="53" selection-start-line="13" selection-start-column="53" selection-end-line="13" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Spring</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>SpringTest04-DI</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: org.springframework:spring-aop:5.3.4</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

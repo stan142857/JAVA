@@ -4,7 +4,8 @@ public class UserSecondTest {
     private String testName;
 
     public UserSecondTest(String testName) {
-        System.out.println("testName被创建");
+        this.testName = testName;
+        System.out.println(testName+": testName被创建");
     }
 
     public String getTestName() {

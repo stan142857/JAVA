@@ -188,11 +188,76 @@ beans.xml容器的配置<官网>
 
    总结：在配置文件加载的时候，容器中管理的对象就已经初始化了
 
+# 3、Spring配置
+
+### 别名
+
+```xml
+    <!--别名 两个名字都可使用-->
+    <alias name="test" alias="test2"/>
+```
+
+### bean的配置
+
+```xml
+    <!--
+    id : bean的唯一标识符，也就是相当于我们学习的对项目
+    class : bean对象所对应的权限命名：包名+类型
+    name : 也是别名,而且 name 可以同时取多个别名，比alias更高级,name 可以用 空格，都好，分号 来分割
+    -->
+    <bean id="test" class="com.yuan.pojo.UserSecondTest" name="test2 test3,test4;test5">
+        <constructor-arg name="testName" value="测试第二个实例"/>
+    </bean>
+```
+
+### import
+
+一般用于团队开发，可以将多个配置文件<bean.xml>导入合并为一个
+
+假设，现在项目中有多个人开发，这三个人复制不通的类开发，不同的类需要注册在不通的bean中
+
+用import将所有人的beans.xml合并为一个总的
+
+- 张三
+- 李四
+- 王五
+- applicationContext.xml
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <import resource="beans.xml"/>
+    <import resource="beans2.xml"/>
+    <import resource="beans3.xml"/>
+</beans>
+```
+
+使用的时候，直接使用总的配置就可以了
+
+# 4、依赖注入
+
+### 1、构造器注入
+
+```xml
+    <bean id="beanOne" class="x.y.ThingOne">
+        <constructor-arg ref="beanTwo"/>
+        <constructor-arg ref="beanThree"/>
+    </bean>
+```
+
+### 2、Set方式注入[重点]
+
+- 依赖注入：Set注入
+  - 依赖：bean对象的创建依赖于容器
+  - 注入：bean对象的所有属性，由容器来注入
 
 
 
-
-
+### 3、拓展方式注入[第三方]
 
 
 
