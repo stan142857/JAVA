@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <!--
+        有参数构造方法
+    -->
+    <!--下标赋值-->
+    <!--<bean id="user" class="com.yuan.pojo.User">-->
+        <!--<constructor-arg index="0" value="下标赋值"/>-->
+    <!--</bean>-->
+
+    <!--参数类型  不建议使用-->
+    <!--<bean id="user" class="com.yuan.pojo.User">-->
+        <!--<constructor-arg type="java.lang.String" value="根据参数类型"/>-->
+    <!--</bean>-->
+
+    <!--参数名-->
+    <bean id="user" class="com.yuan.pojo.User">
+        <constructor-arg name="name" value="直接通过参数名"/>
+    </bean>
+
+    <!--
+    别名 方式
+    -->
+    <!--
+    id : bean的唯一标识符，也就是相当于我们学习的对项目
+    class : bean对象所对应的权限命名：包名+类型
+    name : 也是别名,而且 name 可以同时取多个别名，比alias更高级,name 可以用 空格，都好，分号 来分割
+    -->
+    <bean id="test" class="com.yuan.pojo.UserSecondTest" name="test2 test3,test4;test5">
+        <constructor-arg name="testName" value="测试第二个实例"/>
+    </bean>
+
+    <!--两个名字都可使用-->
+    <alias name="test" alias="testa"/>
+</beans>
