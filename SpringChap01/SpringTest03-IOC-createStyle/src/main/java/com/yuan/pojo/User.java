@@ -6,6 +6,11 @@ package com.yuan.pojo;
 public class User {
     private String name;
 
+    public User(String name) {
+        this.name = name;
+        System.out.println("name被创建");
+    }
+
     public String getName() {
         return name;
     }

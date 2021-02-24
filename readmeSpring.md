@@ -134,7 +134,59 @@ Hello对象的属性是怎么设置的？
 
 ![image-20210221100503293](readmeSpring.assets/image-20210221100503293.png)
 
+### IOC创建对象的方式
 
+beans.xml容器的配置<官网>
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="..." class="...">  
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+    <bean id="..." class="...">
+        <!-- collaborators and configuration for this bean go here -->
+    </bean>
+
+    <!-- more bean definitions go here -->
+
+</beans>
+```
+
+1. 使用无参构造方法创建对象
+
+2. 假设要使用有参构造方法创建对象
+
+   1. 下标赋值
+
+      ```java
+      <bean id="user" class="com.yuan.pojo.User">
+          <constructor-arg index="0" value="下标赋值"/>
+      </bean>
+      ```
+
+   2. 参数类型  不建议使用
+
+      ```java
+      <bean id="user" class="com.yuan.pojo.User">
+      	<constructor-arg type="java.lang.String" value="根据参数类型"/>
+      </bean>
+      ```
+
+   3. 参数名
+
+      ```java
+      <bean id="user" class="com.yuan.pojo.User">
+      	<constructor-arg name="name" value="直接通过参数名"/>
+      </bean>
+      ```
+
+   总结：在配置文件加载的时候，容器中管理的对象就已经初始化了
 
 
 
