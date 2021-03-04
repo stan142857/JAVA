@@ -432,25 +432,105 @@ public void test2(){
 
 3、其余的的只能在web开发中使用到
 
+# 5、Bean的自动装配
 
+- 自动装配是Spring满足bean依赖的一种方式
+- Spring会再上下文中自动寻找，自动给bean装配属性
 
+### 在Spring中有三种装配方式
 
+1. 在xml中显示的配置
+2. 在java中显示配置
+3. 隐式的自动装配bean【重要】
 
+## 5.1、测试
 
+1、环境搭建
 
+- 人
+- 狗
+- 猫
 
+### 5.2、byName 与 byType 自
 
+```xml
+<!--
+        byName : 会自动在容器上下文中查找，和自己对象set方法后面的值对应的beanid
+        byType : 会自动在容器上下文中查找，和自己对象属性类型相同的bean  注入的bean 中的id 都是可以省略的
+    -->
+<bean id="people" class="com.yuan.pojo.People" autowire="byName">
+    <property name="name" value="yuan"/>
+    <!--不自动装配 写的代码-->
+    <!--<property name="dog" ref="dog"/>-->
+    <!--<property name="cat" ref="cat"/>-->
+</bean>
+```
 
+小结：
 
+- byName，需要保证所有的bean的id唯一，且这个bean需要和自动注入的属性的`set方法`的**值**一致
+- byType，需要保证所有的bean的class唯一，且这个bean需要和自动注入的属性的**类型**一致
 
+## 5.3、使用注解开发
 
+jdk1.5支持注解，Spring2.5支持
 
+The introduction of annotation-based configuration raised the question of whether this approach is “better” than XML
 
+使用注解须知
 
+1. 导入约束：context约束
+2. ==配置注解的支持：<context:annotation-config/>==
 
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        https://www.springframework.org/schema/context/spring-context.xsd">
+    <!--开启注解的支持-->
+    <context:annotation-config/>
 
+</beans>
+```
 
+### `@Autowired`[常用]
 
+直接在属性上使用,也可以在set方式上使用
+
+可以不用编写set方法，前提是自动装配的属性在IOC(Spring)容器中存在，且符合名字byName
+
+附加:
+
+```xml
+@Nullable 字段标记这个注解，说明这个字段可以为NULL    
+public void setCat(@Nullable Cat cat) {
+   this.cat = cat;
+}
+```
+
+如果显示定义了 @Autowired 的required属性为false，说明这个对象可以为null，否则不允许为空
+
+```
+@Autowired(required = false)
+private Cat cat;
+```
+
+如果@Autowired自动装配环境很复杂，自动装配无法通过一个注解完成的时候，我们可以使用@Qualifier(value="xxx")去配置@Autowired的使用，指定一个唯一的bean对象注入
+
+### @Resource
+
+先通过名字查找，再通过实例查找，都找不到时候会报错【更高级】
+
+@Autowired与@Resource的区别：
+
+- 都是用来自动装配，都可以放在属性字段上
+- @Autowired通过byType方式实现，而且必须要求这个对象存在
+- @Resource默认通过byName的方式实现，如果找不到名字，则通过byType实现！如果两个都找不到，会报错
+- 执行顺序不同，@Autowaired通过byType的方式实现
 
 
 

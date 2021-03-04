@@ -7,6 +7,8 @@
       <module fileurl="file://$PROJECT_DIR$/SpringTest02-IOC-helloSpring/SpringTest02-IOC-helloSpring.iml" filepath="$PROJECT_DIR$/SpringTest02-IOC-helloSpring/SpringTest02-IOC-helloSpring.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringTest03-IOC-createStyle/SpringTest03-IOC-createStyle.iml" filepath="$PROJECT_DIR$/SpringTest03-IOC-createStyle/SpringTest03-IOC-createStyle.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringTest04/SpringTest04.iml" filepath="$PROJECT_DIR$/SpringTest04/SpringTest04.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringTest05-Autoland/SpringTest05-Autoland.iml" filepath="$PROJECT_DIR$/SpringTest05-Autoland/SpringTest05-Autoland.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringTest05-Autowired/SpringTest05-Autowired.iml" filepath="$PROJECT_DIR$/SpringTest05-Autowired/SpringTest05-Autowired.iml" />
     </modules>
   </component>
 </project>

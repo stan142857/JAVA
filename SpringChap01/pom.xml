@@ -13,6 +13,8 @@
         <module>SpringTest02-IOC-helloSpring</module>
         <module>SpringTest03-IOC-createStyle</module>
         <module>SpringTest04</module>
+        <module>SpringTest05-Autoland</module>
+        <module>SpringTest05-Autowired</module>
     </modules>
 
     <dependencies>

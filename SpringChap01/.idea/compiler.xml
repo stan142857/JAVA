@@ -10,6 +10,8 @@
         <module name="SpringTest02-IOC-helloSpring" />
         <module name="SpringTest03-IOC-createStyle" />
         <module name="SpringTest04" />
+        <module name="SpringTest05-Autoland" />
+        <module name="SpringTest05-Autowired" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -19,6 +21,8 @@
       <module name="SpringTest03-IOC-createStyle" target="1.5" />
       <module name="SpringTest04" target="1.5" />
       <module name="SpringTest04-DI" target="1.5" />
+      <module name="SpringTest05-Autoland" target="1.5" />
+      <module name="SpringTest05-Autowired" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
