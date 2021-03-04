@@ -370,11 +370,42 @@ public class Address {
 
 ### 3、拓展方式注入[第三方]
 
+我们可以使用[P命名与C命名空间实现注入](http://r6d.cn/b9xr9)
 
+##### 引入头部命名空间
 
+```xml
+xmlns:p="http://www.springframework.org/schema/p"
+xmlns:c="http://www.springframework.org/schema/c"
+```
 
+##### 使用
 
+```xml
+<!--P命名空间注入，可以直接注入属性的值-->
+<bean id="user" class="com.yuan.pojo.User" p:name="p-yuan" p:age="25"/>
 
+<!--
+        C-命名空间注入，通过构造器注入
+        相比P命名，需要有参 与 无参方法
+    -->
+<bean id="user2" class="com.yuan.pojo.User" c:name="c-yuan" c:age="25" />
+```
+
+##### 测试
+
+```java
+@Test
+public void test2(){
+    ApplicationContext context = new ClassPathXmlApplicationContext("userbeans.xml");
+
+    User user = context.getBean("user", User.class);
+    User user2 = context.getBean("user2", User.class);
+    System.out.println("P命名注入："+user.toString()+"  C命名："+user2.toString());
+}
+```
+
+注意点：P命名与C命名空间不能直接使用，需要导入约束，即命名空间头部
 
 
 
