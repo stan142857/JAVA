@@ -255,6 +255,117 @@ beans.xml容器的配置<官网>
   - 依赖：bean对象的创建依赖于容器
   - 注入：bean对象的所有属性，由容器来注入
 
+#### 环境搭建：
+
+##### 复杂类型
+
+```java
+public class Address {
+    private String address;
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+}
+```
+
+##### 测试对象
+
+```java
+    //测试样例  value | ref | list | map | set  | bean | idref | props | null
+    private String name;   //value
+    private Address address;   //ref
+    private String[] books;     //idref 数组
+    private List<String> hobbys;  //list
+    private Map<String,String> card;   //map
+    private Set<String> games;  //set
+    private String wife;        //null  空指针
+    private Properties info;   //props
+```
+
+##### beans.xml
+
+```xml
+<bean id="address" class="com.yuan.pojo.Address">
+    <property name="address" value="射阳"/>
+</bean>
+
+<bean id="student" class="com.yuan.pojo.Student">
+    <!--第一种  普通值注入-->
+    <property name="name" value="value测试"/>
+
+    <!--第二种 bean注入 ref-->
+    <property name="address" ref="address"/>
+
+    <!--第三种 数组注入-->
+    <property name="books">
+        <array>
+            <value>红楼梦</value>
+            <value>水浒传</value>
+            <value>西游记</value>
+            <value>三国志</value>
+        </array>
+    </property>
+
+    <!--第四种 list注入-->
+    <property name="hobbys">
+        <list>
+            <value>听歌</value>
+            <value>鞋子</value>
+            <value>加班</value>
+        </list>
+    </property>
+
+    <!--第五种 map注入-->
+    <property name="card">
+        <map>
+            <entry key="身份证" value="321789199511023597"/>
+            <entry key="银行卡" value="010101010101010101"/>
+        </map>
+    </property>
+
+    <!--第六种 set注入-->
+    <property name="games">
+        <set>
+            <value>国正LOL</value>
+            <value>美测LOL</value>
+            <value>美正LOL</value>
+        </set>
+    </property>
+
+    <!--第七种 null注入-->
+    <property name="wife">
+        <null/>
+    </property>
+
+    <!--第八种 properties注入-->
+    <property name="info">
+        <props>
+            <prop key="driver">12456897</prop>
+            <prop key="url">男</prop>
+            <prop key="username">yuan</prop>
+            <prop key="password">lei</prop>
+        </props>
+    </property>
+</bean>
+```
+
+##### 测试类
+
+```java
+    public static void main(String[] args){
+        ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");
+        Student student = (Student) context.getBean("student");
+        System.out.println(student.getName());
+    }
+```
+
+
+
 
 
 ### 3、拓展方式注入[第三方]
