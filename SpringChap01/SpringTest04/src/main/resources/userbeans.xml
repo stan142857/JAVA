@@ -12,5 +12,8 @@
         C-命名空间注入，通过构造器注入
         相比P命名，需要有参 与 无参方法
     -->
-    <bean id="user2" class="com.yuan.pojo.User" c:name="c-yuan" c:age="25" />
+    <!--单例模式 使用同一个实例-->
+    <bean id="user2" class="com.yuan.pojo.User" c:name="c-yuan" c:age="25" scope="singleton"/>
+    <!--原型模式 每次都创建一个新实例-->
+    <bean id="user2-2" class="com.yuan.pojo.User" c:name="c-yuan" c:age="25" scope="prototype"/>
 </beans>
