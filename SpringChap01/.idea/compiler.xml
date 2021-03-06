@@ -12,6 +12,7 @@
         <module name="SpringTest04" />
         <module name="SpringTest05-Autoland" />
         <module name="SpringTest05-Autowired" />
+        <module name="SpringTest06-anno" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -23,6 +24,7 @@
       <module name="SpringTest04-DI" target="1.5" />
       <module name="SpringTest05-Autoland" target="1.5" />
       <module name="SpringTest05-Autowired" target="1.5" />
+      <module name="SpringTest06-anno" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

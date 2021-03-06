@@ -15,6 +15,7 @@
         <module>SpringTest04</module>
         <module>SpringTest05-Autoland</module>
         <module>SpringTest05-Autowired</module>
+        <module>SpringTest06-anno</module>
     </modules>
 
     <dependencies>

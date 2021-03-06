@@ -497,7 +497,11 @@ The introduction of annotation-based configuration raised the question of whethe
 </beans>
 ```
 
-### `@Autowired`[常用]
+### 1、bean
+
+#### `@Autowired`[常用]
+
+==自动装配，通过类型，名字==
 
 直接在属性上使用,也可以在set方式上使用
 
@@ -521,16 +525,139 @@ private Cat cat;
 
 如果@Autowired自动装配环境很复杂，自动装配无法通过一个注解完成的时候，我们可以使用@Qualifier(value="xxx")去配置@Autowired的使用，指定一个唯一的bean对象注入
 
-### @Resource
+#### @Resource
+
+==自动装配，通过名字、类型==
 
 先通过名字查找，再通过实例查找，都找不到时候会报错【更高级】
 
-@Autowired与@Resource的区别：
+#### 异同
 
 - 都是用来自动装配，都可以放在属性字段上
 - @Autowired通过byType方式实现，而且必须要求这个对象存在
 - @Resource默认通过byName的方式实现，如果找不到名字，则通过byType实现！如果两个都找不到，会报错
 - 执行顺序不同，@Autowaired通过byType的方式实现
+
+#### @Component
+
+组件，放在类上，说明这个类被Spring管理了，就是bean
+
+### 2、属性如何注入
+
+```java
+//@Component 组件 等价于  applicationContext.xml 中<bean id="user" class="com.yuan.pojo.User"/>
+@Component
+public class User {
+    //测试注解开发  简单的可以，复杂的还是走配置文件
+    //相当于 <property name="age" value="26">
+    @Value("27")
+    public String age;
+
+    //测试注解开发 set方法  优先使用 set ，后面使用定义时的对象
+    @Value("26")
+    public void setAge(String age) {
+        this.age = age;
+    }
+
+    //对比注解开发  赋值模式
+    public String name = "stan 注解开发";
+}
+```
+
+### 3、衍生的注解
+
+@Component有几个衍生注解，我们在web开发中，会按照mvc三层架构分层
+
+- dao【@Repository】
+- service【@Service】
+- controller【@Controller】
+
+以上四个注解功能是一样的，都是代表将某个类注册到Spring容器中装配
+
+### 4、自动装配注解
+
+```xml
+@Autowired：自动装配通过类型，名字
+	如果上述不能唯一自动装配上属性，则需要通过@Qualifier(value="xxx")
+@Nullable：字段标识了这个注解，说明这个字段可以为null
+@Resource：自动装配通过名字，类型
+```
+
+### 5、作用域
+
+==@Scope("singleton")==
+
+```
+@Component
+@Scope("singleton")
+public class User {
+    @Value("27")
+    public String age;
+}
+
+```
+
+### 6、小结
+
+xml与注解：
+
+- xml    更加万能，适用于任何场合，维护简单方便
+- 注解   不是自己的类无法使用 ，维护相对复杂
+
+xml与注解的最佳实践：
+
+- xml   用来管理bean
+- 注解   只负责完成属性的注入
+- 我们在使用的过程中，只需要注意一个问题：必须让注解生效，就需要开启注解的支持
+
+```xml
+<!--指定要扫描的包，这个包下的注解就会生效-->
+<context:component-scan base-package="com.yuan"/>
+<!--开启注解的驱动的支持-->
+<context:annotation-config/>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
