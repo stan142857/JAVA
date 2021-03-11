@@ -10,6 +10,7 @@
       <module fileurl="file://$PROJECT_DIR$/SpringTest05-Autoland/SpringTest05-Autoland.iml" filepath="$PROJECT_DIR$/SpringTest05-Autoland/SpringTest05-Autoland.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringTest05-Autowired/SpringTest05-Autowired.iml" filepath="$PROJECT_DIR$/SpringTest05-Autowired/SpringTest05-Autowired.iml" />
       <module fileurl="file://$PROJECT_DIR$/SpringTest06-anno/SpringTest06-anno.iml" filepath="$PROJECT_DIR$/SpringTest06-anno/SpringTest06-anno.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SpringTest07-appconfig/SpringTest07-appconfig.iml" filepath="$PROJECT_DIR$/SpringTest07-appconfig/SpringTest07-appconfig.iml" />
     </modules>
   </component>
 </project>

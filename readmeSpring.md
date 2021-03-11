@@ -471,7 +471,7 @@ public void test2(){
 - byName，需要保证所有的bean的id唯一，且这个bean需要和自动注入的属性的`set方法`的**值**一致
 - byType，需要保证所有的bean的class唯一，且这个bean需要和自动注入的属性的**类型**一致
 
-## 5.3、使用注解开发
+# 6、使用注解开发
 
 jdk1.5支持注解，Spring2.5支持
 
@@ -617,15 +617,88 @@ xml与注解的最佳实践：
 <context:annotation-config/>
 ```
 
+# 7、使用JAVA的方式配置Spring
+
+我们现在要完全不使用Spring的xml配置了，全权交给java来做
+
+javaConfig是Spring的一个子项目，再Spring4之后，它成为了一个核心功能
+
+### 实体类
+
+```java
+//这里这个注解的作用，就是说明这个类被spring接管了，注册到了容器中
+@Component
+public class User {
+    private String name;
+
+    public String getName() {
+        return name;
+    }
+
+    @Value("yuan")
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                '}';
+    }
+}
+```
+
+### 配置类
+
+```java
+package com.yuan.config;
+
+import com.yuan.pojo.User;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import org.springframework.stereotype.Component;
+
+//@Configuration  这个也会被Spring容器托管，注册到容器中，因为它本身就是一个@Component，即组件
+//@Configuration  代表这是一个配置类，就和我们之前看的beans.xml医院
+@Configuration
+//spring 可以完全摈弃配置  新特性
+@ComponentScan("com.yuan.pojo")
+@Import(yuanConfig.class)
+public class yuanConfig {
 
 
+    //注册一个bean，就相当于我们之前写的一个bean标签
+    //这个方法的名字，就相当于bean标签中的id属性
+    //这个方法的返回值，就相当于bean标签中的class属性
+    @Bean
+    public User getUser(){
+        return new User();//就是返回要注入的bean对象
+    }
+}
 
+```
 
+### 测试类
 
+```java
+import com.yuan.config.yuanConfig;
+import com.yuan.pojo.User;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+public class MyTest {
+    public static void main(String []args){
+        //如果完全使用了配置类方式去做，我们就只能通过AnnotationConfig 上下文去获取容器，通过配置类的class对象加载
+        ApplicationContext context = new AnnotationConfigApplicationContext(yuanConfig.class);
+        User user = context.getBean("getUser", User.class);
+        System.out.println(user.toString());
+    }
+}
+```
 
-
-
-
+这种纯java的配置方式，再SpringBoot中随处可见
 
 
 
