@@ -835,11 +835,19 @@ public class MyTest {
 
 # 9、AOP
 
+## 9.1 什么是AOP
 
+意为：[面向切面编程](https://baike.baidu.com/item/面向切面编程/6016335)，通过[预编译](https://baike.baidu.com/item/预编译/3191547)方式和运行期间动态代理实现程序功能的统一维护的一种技术。AOP是[OOP](https://baike.baidu.com/item/OOP)的延续，是软件开发中的一个热点，也是[Spring](https://baike.baidu.com/item/Spring)框架中的一个重要内容，是[函数式编程](https://baike.baidu.com/item/函数式编程/4035031)的一种衍生范型。利用AOP可以对业务逻辑的各个部分进行隔离，从而使得业务逻辑各部分之间的[耦合度](https://baike.baidu.com/item/耦合度/2603938)降低，提高程序的可重用性，同时提高了开发的效率。
 
+![image-20210312111250248](readmeSpring.assets/image-20210312111250248.png)
 
+## 9.2 Aop在Spring中的作用
 
+![image-20210312111856768](readmeSpring.assets/image-20210312111856768.png)
 
+![image-20210312112000615](readmeSpring.assets/image-20210312112000615.png)
+
+## 9.3 使用Spring实现Aop
 
 
 
