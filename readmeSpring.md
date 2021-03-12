@@ -700,6 +700,143 @@ public class MyTest {
 
 这种纯java的配置方式，再SpringBoot中随处可见
 
+# 8、代理模式
+
+为什么要学习代理模式？因为这就是SpringAOP的底层！【SpringAOP和SpringMVC】
+
+代理模式的分类：
+
+- 静态代理
+
+- 动态代理
+
+![image-20210311152436196](readmeSpring.assets/image-20210311152436196.png)
+
+## 8.1静态代理
+
+### 角色分析：
+
+- 抽象角色：一般会使用接口或者抽象类类解决
+
+- 真实角色：被代理的角色
+
+- 代理角色：代理真实角色，代理真实角色后，我们一般会做一些附属操作
+
+- 客户：访问代理对象的人
+
+
+
+### 代码步骤
+
+1. #### 接口
+
+   ```java
+   //租房 接口
+   public interface Rent {
+       public void rent();
+   }
+   ```
+
+2. #### 真实角色
+
+   ```java
+   //房东
+   public class Host {
+       public void rent(){
+           System.out.println("房东要出租房子");
+       }
+   }
+   ```
+
+3. #### 代理角色
+
+   ```java
+   //中介
+   public class proxy implements Rent{
+       private Host host;
+       public proxy(){
+   
+       }
+       public proxy(Host host){
+           this.host = host;
+       }
+   
+       public void rent(){
+           //代理帮房东租房子
+           host.rent();
+       }
+   
+       //看房
+       public void seeHouse(){
+           System.out.println("中介带你看房");
+       }
+   
+       //收中介费
+       public void sign(){
+           System.out.println("中介签租房合同");
+       }
+   
+       //收中介费
+       public void fare(){
+           System.out.println("中介收中介费");
+       }
+   }
+   ```
+
+4. #### 客户端访问代理角色
+
+   ```java
+   //租房者 我
+   public class Client {
+       public static void main(String []args){
+           //房东要租房子
+           Host host = new Host();
+           //直接找房东租房子  但是真实情况下一般找不到 只能找中介
+           host.rent();
+           //代理，中介帮房东租房子，但代理角色一般会有一些附属操作，比如中介收钱
+           proxy proxy = new proxy(host);
+           //你不用面对房东，直接找中介租房即可
+           proxy.rent();
+       }
+   }
+   ```
+
+   
+
+### 代理模式的好处：
+
+- 可以使真实角色的操作更加纯粹，不用去关注一些公共的业务
+- 公共也就是交给代理角色，实现了业务的分工！
+- 公共业务发送扩展的时候，方便集中管理！
+
+### 代理模式的缺点：
+
+- 一个真实角色就会产生一个代理角色，代码量会翻倍，开发效率会变低
+
+### 加深理解
+
+![image-20210311170959830](readmeSpring.assets/image-20210311170959830.png)
+
+## 8.2、动态代理
+
+- 动态代理和静态代理角色一样
+
+- 动态代理的代理类是动态生成的，不是我们写好的
+
+- 动态代理分为两大类：基于接口的动态代理，基于类的动态代理
+
+  - 基于接口---JDK动态代理【我们在这里使用】
+  - 基于类：cglib
+  - java字节码实现：javassist
+
+  需要了解两个类：proxy, invocationHander: 调用处理程序
+
+
+
+# 9、AOP
+
+
+
 
 
 

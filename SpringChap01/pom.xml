@@ -17,6 +17,7 @@
         <module>SpringTest05-Autowired</module>
         <module>SpringTest06-anno</module>
         <module>SpringTest07-appconfig</module>
+        <module>SpringTest08-proxy</module>
     </modules>
 
     <dependencies>
