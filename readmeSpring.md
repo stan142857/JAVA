@@ -849,9 +849,20 @@ public class MyTest {
 
 ## 9.3 使用Spring实现Aop
 
+【重点】使用AOP织入，需要导入一个依赖包
+
+```xml
+<dependency>
+    <!-- heeps://mvnrepository.com/artifact/org.aspectj/aspectjweaver -->
+    <groupId>org.aspectj</groupId>
+    <artifactId>aspectjweaver</artifactId>
+    <version>1.9.4</version>
+</dependency>
+```
 
 
 
+方式一：使用Spring的API接口
 
 
 
