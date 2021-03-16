@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--绑定接口  核心配置文件-->
+<mapper namespace="com.yuan.mapper.UserMapper">
+    <select id="selectUser" resultType="user">
+        select * from infomanage.userinfo;
+    </select>
+
+</mapper>

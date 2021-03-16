@@ -19,6 +19,7 @@
         <module>SpringTest07-appconfig</module>
         <module>SpringTest08-proxy</module>
         <module>SpringTest09-aop</module>
+        <module>SpringTest10-mybatis</module>
     </modules>
 
     <dependencies>

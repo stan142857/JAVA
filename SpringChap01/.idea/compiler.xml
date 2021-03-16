@@ -16,6 +16,7 @@
         <module name="SpringTest07-appconfig" />
         <module name="SpringTest08-proxy" />
         <module name="SpringTest09-aop" />
+        <module name="SpringTest10-mybatis" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -31,6 +32,7 @@
       <module name="SpringTest07-appconfig" target="1.5" />
       <module name="SpringTest08-proxy" target="1.5" />
       <module name="SpringTest09-aop" target="1.5" />
+      <module name="SpringTest10-mybatis" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>
