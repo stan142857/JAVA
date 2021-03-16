@@ -862,9 +862,9 @@ public class MyTest {
 
 
 
-方式一：使用Spring的API接口
+方式一：使用Spring的API接口【主要SpringAPI接口实现】
 
-
+方式二：自定义实现AOP【主要是切面定义】
 
 
 
