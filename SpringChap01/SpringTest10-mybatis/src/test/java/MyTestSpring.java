@@ -9,7 +9,7 @@ import java.io.IOException;
 public class MyTestSpring {
     @Test
     public void test() throws IOException {
-        ApplicationContext context = new ClassPathXmlApplicationContext("spring-dao.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
 
         UserMapper userMapper = context.getBean("userMapper", UserMapper.class);
         for(User user:userMapper.selectUser()){
