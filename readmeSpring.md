@@ -890,7 +890,12 @@ public class MyTest {
 
 ## 10.2、 [Mybatis-spring](http://mybatis.org/spring/zh/index.html)
 
-
+1. 编写数据源配置
+2. sqlSessionFactory
+3. sqlSessionTemplate
+4. 需要给接口加实现类
+5. 将自己写的实现类，注入到Spring中
+6. 测试使用即可！
 
 
 
