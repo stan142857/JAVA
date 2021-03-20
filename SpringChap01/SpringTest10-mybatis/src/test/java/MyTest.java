@@ -13,7 +13,7 @@ import java.util.List;
 public class MyTest {
     @Test
     public void test() throws IOException {
-        String resource = "mybatis-config.xml";
+        String resource = "mybatis-config-noSpring.xml";
         //Resources 加载配置文件  赋给数据量读取
         InputStream resourceAsStream = Resources.getResourceAsStream(resource);
         //获取session对象
