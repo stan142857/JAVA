@@ -899,9 +899,251 @@ public class MyTest {
 
 # 11、声明式事务
 
+## 1、回顾事务
 
+- 把一组业务当成一个业务来做，要么都成功，要么都失败
+- 事务在项目开发中，十分重要，涉及数据一致性问题
+- 确保完整性和一致性
 
+### 事务ACID原则
 
+- 原子性
+  - 一个事务是一个不可分割的工作单位，事务中包括的操作要么都做，要么都不做
+- 一致性
+  - 事务必须是使数据库从一个一致性状态变到另一个一致性状态。一致性与原子性是密切相关的
+- 隔离性
+  - 多个业务可能操作同一个资源，防止数据损坏
+- 持久性
+  - 事务一旦提交，无论系统发送什么问题，结果都不会影响，持久化的写到存储器中
+
+## 2、[spring中的事务管理](https://www.bilibili.com/video/BV1WE411d7Dv?p=27)
+
+- [声明式事务](http://r6d.cn/bd5z5)：AOP
+- [编程式事务](http://r6d.cn/bd516)：需要在代码中，进行事务的管理
+
+思考：
+
+为什么需要事务？
+
+- 如果不配置事务，可能存在数据提交不一致的情况
+- 如果我们不在spring中取配置声明式事务，我们就需要在代码中手动配置事务
+- 事务在项目的开发中十分重要，涉及到数据的一致性和完整性，不容马虎！
+
+#### 事务配置代码：
+
+```xml
+
+    <!--配置声明式事务-->
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!--<constructor-arg ref="dataSource" />-->
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!--结合AOP实现事务的织入-->
+    <!--配置事务通知-->
+    <tx:advice id="txAdvice" transaction-manager="transactionManager">
+        <!--给哪些方法配置事务-->
+        <tx:attributes>
+            <tx:method name="add" propagation="REQUIRED"/>
+            <tx:method name="delete" propagation="REQUIRED"/>
+            <tx:method name="update" propagation="REQUIRED"/>
+            <tx:method name="query" read-only="true"/>
+            <tx:method name="*" propagation="REQUIRED"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <aop:config>
+        <!--com.yuan.mapper 下的 所有类  的所有方法  都可以使用事务-->
+        <aop:pointcut id="txPointCut" expression="execution(* com.yuan.mapper.*.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="txPointCut"/>
+    </aop:config>
+```
+
+#### 实体类
+
+```java
+import lombok.Data;
+
+@Data
+public class User {
+    private int id;
+    private String username;
+    private String userpwd;
+    private String hobby;
+
+    public User(int id, String username, String userpwd, String hobby) {
+        this.id = id;
+        this.username = username;
+        this.userpwd = userpwd;
+        this.hobby = hobby;
+    }
+}
+```
+
+#### 接口
+
+```java
+import com.yuan.pojo.User;
+import java.util.List;
+
+public interface UserMapper {
+    public List<User> selectUser();
+
+    public int addUser(User user);
+    public int deleteUser(int id);
+}
+```
+
+#### 接口对应的核心配置sql
+
+```xml
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--绑定接口  核心配置文件-->
+<mapper namespace="com.yuan.mapper.UserMapper">
+    <select id="selectUser" resultType="user">
+        select * from infomanage.userinfo;
+    </select>
+    
+    <insert id="addUser" parameterType="user">
+        insert into infomanage.userinfo(id,username,userpwd,hobby)
+          values (#{id},#{username},#{userpwd},#{hobby});
+    </insert>
+
+    <delete id="deleteUser" parameterType="int">
+        delete from userinfo where id=#{id};
+    </delete>
+
+</mapper>
+```
+
+#### 接管对象 手动创建
+
+```java
+import com.yuan.pojo.User;
+import org.mybatis.spring.support.SqlSessionDaoSupport;
+
+import java.util.List;
+
+public class UserMapperImpl extends SqlSessionDaoSupport implements UserMapper {
+    public List<User> selectUser() {
+		//待插入的测试数据
+        User user = new User(6,"stand", "stands", "5");
+        UserMapper userMapper = getSqlSession().getMapper(UserMapper.class);
+
+        userMapper.addUser(user);
+        userMapper.deleteUser(6);
+
+        return userMapper.selectUser();
+    }
+
+    public int addUser(User user) {
+        return getSqlSession().getMapper(UserMapper.class).addUser(user);
+    }
+
+    public int deleteUser(int id) {
+        return getSqlSession().getMapper(UserMapper.class).deleteUser(id);
+    }
+}
+```
+
+#### 通用：注册登记
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       https://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <import resource="spring-dao.xml"/>
+     <!--注入-->
+    <bean id="userMapper" class="com.yuan.mapper.UserMapperImpl">
+        <property name="sqlSessionFactory" ref="sqlSessionFactory"/>
+    </bean>
+</beans>
+```
+
+#### 通用：spring资源配置
+
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xmlns:tx="http://www.springframework.org/schema/tx"
+       xsi:schemaLocation="
+           http://www.springframework.org/schema/beans
+           https://www.springframework.org/schema/beans/spring-beans.xsd
+           http://www.springframework.org/schema/aop
+           https://www.springframework.org/schema/aop/spring-aop.xsd
+           http://www.springframework.org/schema/tx
+           https://www.springframework.org/schema/tx/spring-tx.xsd">
+
+    <!--DataSource: 使用spring的数据源替换mybatis的配置 c3p0 dbcp druid
+        我们这里使用Spring提供的JDBC : org.springframework.jdbc.datasource.DriverManagerDataSource
+    -->
+    <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="com.mysql.jdbc.Driver"/>
+        <property name="url" value="jdbc:mysql://localhost:3306/infomanage?useSSL=false&amp;useUnicode=true&amp;characterEncoding=UTF-8"/>
+        <property name="username" value="root"/>
+        <property name="password" value="17712245617yuan"/>
+    </bean>
+    <!--sqlSessionFactory-->
+    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <!--绑定mybatis配置文件-->
+        <property name="configLocation" value="classpath:mybatis-config.xml"/>
+        <property name="mapperLocations" value="classpath:com/yuan/mapper/*.xml"/>
+    </bean>
+
+    <!--SqlSessionTemplate 就是我们使用的sqlSession-->
+    <bean id="sqlSession" class="org.mybatis.spring.SqlSessionTemplate">
+        <!--只能使用构造器注入 sqlsessionFactory 因为它没有set方法-->
+        <constructor-arg index="0" ref="sqlSessionFactory"/>
+    </bean>
+	<!--此处以下进行事务配置代码的插入-->
+</beans>
+```
+
+#### 测试
+
+```java
+import com.yuan.mapper.UserMapper;
+import com.yuan.pojo.User;
+import org.junit.Test;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+import java.io.IOException;
+import java.util.List;
+
+public class MyTestSpring {
+    @Test
+    public void test() throws IOException {
+        ApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
+
+        UserMapper userMapper = context.getBean("userMapper", UserMapper.class);
+        List<User> users = userMapper.selectUser();
+        for(User user:users){
+            System.out.println(user);
+        }
+    }
+}
+```
+
+# 12、总结与回顾
+
+重点 测试项目 5 6 7
+
+尝试将其他项目下的xml配置方式改成javaConfig方式
+
+重点在于理解思想！
 
 
 

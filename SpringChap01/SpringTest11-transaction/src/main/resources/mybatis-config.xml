@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!--configuration核心配置文件-->
+<configuration>
+    <!--引入外部配置文件 联合Spring 无需引入-->
+
+    <!--引入日志-->
+    <!--<settings>-->
+        <!--&lt;!&ndash;标准的日志工厂的实现&ndash;&gt;-->
+        <!--<setting name="logImpl" value="STDOUT_LOGGING"/>-->
+    <!--</settings>-->
+    <!--可以给实体类起别名-->
+    <typeAliases>
+        <package name="com.yuan.pojo"/>
+    </typeAliases>
+    <!--可以定义多个环境 联合Spring时可去除 DataSource部分-->
+
+    <!--每一个Mapper.xml都需要在mybatis核心配置中注册 联合Spring时去除 绑定mybatis配置文件部分-->
+
+
+</configuration>
