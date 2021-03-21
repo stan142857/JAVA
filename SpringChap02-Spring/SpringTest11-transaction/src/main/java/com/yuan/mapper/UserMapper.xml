@@ -14,7 +14,7 @@
     </insert>
 
     <delete id="deleteUser" parameterType="int">
-        deletes from userinfo where id=#{id};
+        delete from userinfo where id=#{id};
     </delete>
 
 </mapper>
