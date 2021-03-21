@@ -29,9 +29,4 @@
         <!--只能使用构造器注入 sqlsessionFactory 因为它没有set方法-->
         <constructor-arg index="0" ref="sqlSessionFactory"/>
     </bean>
-
-    <!--注入-->
-    <bean id="userMapper" class="com.yuan.mapper.UserMapperImpl">
-        <property name="sqlSession" ref="sqlSession"/>
-    </bean>
 </beans>
